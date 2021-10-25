@@ -1,0 +1,136 @@
+	/* import fonts */
+	@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+	/* VARIABLES */
+	:root {
+	    --bg-color: #fff;
+	    --link-color: #000;
+	    --link-size: 1.1rem;
+	    --right-side-bg-color: 81, 187, 254;
+	}
+
+	/* General CSS */
+	* {
+	    padding: 0;
+	    margin: 0;
+	    box-sizing: border-box;
+	    font-family: Rubik;
+	}
+
+	/* CART */
+	.cartSection {
+	    height: 90vh;
+	    width: 40%;
+	    position: relative;
+	    /* display: none; */
+	    float: right;
+	}
+
+	/* cart header */
+	.cartSection__header {
+	    display: flex;
+	    justify-content: space-around;
+	    padding: 10px 0;
+	    font-weight: 600;
+	    font-size: 2rem;
+	}
+
+	/* cart items */
+	.cartSection__items {
+	    max-height: calc(100vh - 247px);
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	}
+
+	/* cart item */
+	.cartSection__item {
+	    display: flex;
+	    justify-content: space-around;
+	    padding: 10px 0;
+	}
+
+	.cartSection__item div {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
+
+	/* item info */
+	.cartSection__item .cartSection__info {
+	    flex: 1;
+	    background-color: rgba(255, 255, 255, 0.6);
+
+	    border-radius: 0 10px 10px 0;
+
+	    padding: 10px;
+	}
+
+	.cartSection__item .cartSection__info:hover {
+	    background-color: rgba(255, 0, 0, 0.6);
+	    cursor: pointer;
+	}
+
+	.cartSection__item .cartSection__info img {
+	    width: 75px;
+	}
+
+	/* unit price */
+	.cartSection__item .cartSection__price {
+	    flex: 1;
+	    font-size: 1.2rem;
+	}
+
+	/* units */
+	.cartSection__item .units {
+	    flex: 1;
+	}
+
+	.cartSection__item .units .number {
+	    margin: 0 10px;
+
+	    font-size: 1.2rem;
+	}
+
+	.cartSection__item .units .units__symbol {
+	    width: 20px;
+	    height: 20px;
+
+	    background-color: rgb(242, 255, 58);
+
+	    border-radius: 50%;
+
+	    font-weight: bold;
+
+	    cursor: pointer;
+	}
+
+	/* cart footer */
+	.cart-footer {
+	    width: 100%;
+	    background-color: rgb(255, 21, 21);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+
+	    border-left: 1px solid rgb(var(--right-side-bg-color));
+	}
+
+	.cart-footer div {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+	    padding: 15px 0;
+
+	    font-size: 1.3rem;
+	}
+
+	.cart-footer .subtotal {
+	    background-color: white;
+	}
+
+	.cart-footer .checkout {
+	    background-color: rgb(242, 255, 58);
+
+	    cursor: pointer;
+	}
